@@ -7,7 +7,18 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
+    let zero = 0;
+
+    for (let i = 1; i <= n; i++) {
+        let countString = String(i);
+        countString.split('').forEach((item) => {
+            if (item.includes('0')) {
+                zero += 1;
+            }
+        })
+    }
+
+    return zero
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

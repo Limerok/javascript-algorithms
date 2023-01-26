@@ -14,7 +14,12 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    str = str.replace(/[^а-яё]/gi, '');
+    
+    const stringRevers = str.split('').reverse().join('').toLowerCase(),
+        string = str.toLowerCase();
+
+    return stringRevers.includes(string)
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
@@ -22,6 +27,7 @@ function palindrome(str) {
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false
+console.log(palindrome('О, лета тело!')); // true
 
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
