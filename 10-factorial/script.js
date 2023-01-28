@@ -8,9 +8,11 @@
 */
 
 function factorial(n) {
-    var result = 1;
-    while(n){
-        result *= n--;
+    let result = 1;
+    let count = n;
+    
+    while(count){
+        result *= count--;
     }
     return result;
 }

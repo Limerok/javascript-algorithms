@@ -9,7 +9,7 @@
 */
 
 function sumOfTwo(arr, sum) {
-    return arr.concat(arr[0]).some((n, i, a) => (n + a[i+1]) ||  (n + a[i]) === sum);
+    return arr.some((item) => arr.includes(sum - item));
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

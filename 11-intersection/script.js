@@ -8,15 +8,15 @@
 */
 
 function intersection(arr1, arr2) {
-    let result = [];
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr2.includes(arr1[i])) {
-        result.push(arr1[i]);
+    const result = [];
+
+    arr1.forEach((element) => {
+      if (arr2.includes(element) && !result.includes(element)) {
+        result.push(element);
       }
-    }
-    return result.filter((item, index) => {
-        return result.indexOf(item) === index
-    });
+    }) 
+
+  return result
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

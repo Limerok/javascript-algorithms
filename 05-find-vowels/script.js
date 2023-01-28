@@ -8,25 +8,24 @@
  * ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'].
  *
 */
+const massVowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
 
 function findVowels(str) {
     let sumVowels = 0;
-    const massVowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'],
-        text = str.toLowerCase();
+    const massVowelsStr = massVowels.join('');
+    const text = str.toLowerCase().split('');
 
-    massVowels.forEach((item) => {
-        if (text.includes(item)) {
+    text.forEach((item) => {
+        if (massVowelsStr.includes(item)) {
             sumVowels += 1;
         }
     })
 
     return sumVowels
-
-    
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(findVowels('здравствуй')); // 2
+console.log(findVowels('здрааавствууй')); // 2
 console.log(findVowels('привет')); // 2
 console.log(findVowels('хеллоу')); // 3

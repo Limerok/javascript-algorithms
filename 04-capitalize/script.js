@@ -7,11 +7,11 @@
 */
 
 function capitalize(str) {
-   let text =  str.replace(/( |^)[а-яёa-z]/g, function(x){ return x.toUpperCase(); }  );
+    const text = str.replace(/( |^)[а-яёa-z]/g, function(x){ return x.toUpperCase(); });
 
     return text
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-//console.log(capitalize('молодость всё      простит')); // "Молодость Всё Простит"
+//console.log(capitalize('молодость всё      простит')); // "Молодость Всё Простит

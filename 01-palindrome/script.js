@@ -14,12 +14,10 @@
 */
 
 function palindrome(str) {
-    str = str.replace(/[^а-яё]/gi, '');
-    
-    const stringRevers = str.split('').reverse().join('').toLowerCase(),
-        string = str.toLowerCase();
+    const preparedStr = str.replace(/[^а-яё]/gi, '').toLowerCase(),
+        stringRevers = preparedStr.split('').reverse().join('');
 
-    return stringRevers.includes(string)
+    return stringRevers.includes(preparedStr)
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

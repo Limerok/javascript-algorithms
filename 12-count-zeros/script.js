@@ -10,8 +10,7 @@ function countZeros(n) {
     let zero = 0;
 
     for (let i = 1; i <= n; i++) {
-        let countString = String(i);
-        countString.split('').forEach((item) => {
+        String(i).split('').forEach((item) => {
             if (item.includes('0')) {
                 zero += 1;
             }

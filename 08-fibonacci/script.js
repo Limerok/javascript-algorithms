@@ -9,7 +9,7 @@
 */
 
 function fibonacci(n) {
-    let mass = [0 , 1]
+    const mass = [0 , 1]
 
     for (i = 1; i<n; i++) {
         mass[i+1] = mass[i-1] + mass[i];
